@@ -66,3 +66,16 @@ Ecrire un programme qui demande un nombre positif non nul de départ,
 et qui calcule sa factorielle.
 
 Par exemple, la factorielle de 6, notée 6!, vaut 1 ×2×3×4×5×6.
+
+Exercice 13 :
+
+Ecrire un programme qui demande à l'utilisateur de taper un entier n, puis qui calcule la somme des carrées des n premiers entiers impairs.
+Par exemple, si n = 5 le résultat est : 1 ^ 2 + 3 ^ 2 + 5 ^ 2 + 7 ^ 2 + 9 ^ 2 = 165 .
+
+Exercice 14 :
+
+Ecrire un programme qui affiche les diviseurs d'un entier positif n non nul.
+
+Exercice 15 :
+
+A la naissance de Amal, son grand-père Ali, lui ouvre un compte bancaire. Ensuite, à chaque anniversaire, le grand père de Amal verse sur son compte 500dh, auxquels il ajoute le triple de l'âge de Amal. Par exemple, lorsqu'elle a quatre ans, il lui verse 512dh. Ecrire un programme qui permette de déterminer quelle somme aura Amal lors de son nième anniversaire.
