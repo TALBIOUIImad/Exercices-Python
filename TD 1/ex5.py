@@ -1,0 +1,1 @@
+print('Il a dit : "Python est genial !"')

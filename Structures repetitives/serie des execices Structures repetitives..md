@@ -79,3 +79,26 @@ Ecrire un programme qui affiche les diviseurs d'un entier positif n non nul.
 Exercice 15 :
 
 A la naissance de Amal, son grand-père Ali, lui ouvre un compte bancaire. Ensuite, à chaque anniversaire, le grand père de Amal verse sur son compte 500dh, auxquels il ajoute le triple de l'âge de Amal. Par exemple, lorsqu'elle a quatre ans, il lui verse 512dh. Ecrire un programme qui permette de déterminer quelle somme aura Amal lors de son nième anniversaire.
+
+Exercice 16 :
+
+Écrire un programme qui demande à l'utilisateur de taper un entier n (rang) 
+et qui calcule le terme Un de la suite U défini par : U 0 = 6 
+ U n+1 = 4U n +10
+
+Exercice 17 :
+
+Ecrire un programme qui demande à l'utilisateur de taper un entiern,
+ supérieur à 2 jusqu'à ce que la réponse convienne, puis qui calcule 
+ et affiche tous les termes de la suite de Fibonacci, inférieurs ou égaux à n.
+La suite de Fibonacci est définie comme suite :
+U 0 =0
+U 1 =1
+U n+2 = U n+1 + U n
+
+Exercice 18 :
+
+Ecrire un programme qui détermine si un nombre est premier 
+ou non (rappel: un nombre premier n'est divisible que par 1 et par lui-même).
+
+
