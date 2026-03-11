@@ -1,0 +1,13 @@
+analyse = (10,12,14.5,6,2.5)
+algebre = (8,6.5,12,14.5,10.5)
+probabilite = (9.5,14,12,15,13.5)
+statistique = (19,20,10,19,18)
+total = analyse + algebre + probabilite + statistique
+som = sum(total)
+tot = len(total)
+maxi = max(total)
+mini = min(total)
+print("La somme des notes est : ",som)
+print("La moyenne des notes est : ",format(som/tot,".2f"))
+print("Le maximale des notes est : ",maxi)
+print("Le minimale des notes est : ",mini)

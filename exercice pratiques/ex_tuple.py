@@ -1,0 +1,5 @@
+n = int(input("Veuillez entrer un nombre entier : "))
+nbr = tuple(range(1,n+1))
+print(nbr)
+print(nbr[::2])
+print(nbr[1::2])

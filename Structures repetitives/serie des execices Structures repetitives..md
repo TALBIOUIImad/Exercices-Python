@@ -101,4 +101,29 @@ Exercice 18 :
 Ecrire un programme qui détermine si un nombre est premier 
 ou non (rappel: un nombre premier n'est divisible que par 1 et par lui-même).
 
+Exercice 19 :
 
+Écrire un programme qui demande à l'utilisateur de saisir le nombre d'équipes participant à un championnat, puis le programme affiche la liste des matchs à domicile et à l'extérieur pour ce championnat.
+
+Exercice 20 :
+
+Ce jeu est très simple. L'ordinateur tire un nombre au hasard entre 1 et 30 et vous avez cinq essais pour le trouver. Après chaque tentative, l'ordinateur vous dira si le nombre que vous avez proposé est trop grand, trop petit, ou si vous avez trouvé le bon nombre.
+
+Exercice 21 :
+
+ Ecrire un programme qui utilise un menu pouvant effectuer les opérations suivantes: somme, soustraction, multiplication, division, le reste d'une division entière et puissance.
+Après avoir choisi l'opération, le programme doit demander à l'utilisateur
+d'entrer les deux termes de l'opération, puis le programme affiche le résultat.
+Le programme doit également demander à l'utilisateur s'il souhaite démarrer une autre opération ou quitter le programme.
+
+Exercice 23 :
+
+Écrire un programme qui demande à l'utilisateur d'entrer un entier, puis le programme trouve et affiche l'inverse de ce nombre.
+
+Exercice 24 :
+
+Écrire un programme qui vérifie si un nombre est palindrome ou non. (rappel: Un nombre palindrome est un nombre qui peut se lire indifféremment de gauche à droite ou de droite à gauche, Exemple 161).
+
+Exercice 25 :
+
+Ecrire un programme qui calcule le pgcd de deux nombres entiers positifs.

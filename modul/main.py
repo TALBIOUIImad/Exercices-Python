@@ -1,0 +1,5 @@
+A = float(input("Veuillez entrer la valeur de A : "))
+B = float(input("Veuillez entrer la valeur de B : "))
+from fct import signe as (A , B)
+print("Le minimum est : ",min(A,B))
+print("Le maximum est : ",max(A,B))
