@@ -1,13 +1,19 @@
 import openpyxl
 import os
 
+    #sauvgarder toutes les donnees dans un fichier excel dans le meme dossier
+    # cree 2 feuilles : 1 -> contien les donnees du treeview et 2 -> contien les modules et leur coefs 
 def sauvegarder_excel(donnee_table, coefficients, dossier):
     wb = openpyxl.Workbook()
+    #feuille 1 : info etd et notes
     ws = wb.active
+    #titre des colonnes
     ws.title = "Étudiants"
     titres = ["ID", "Nom", "Prenom", "CNE","Algèbre 1", "Coef","Analyse 1", "Coef","MTU", "Coef","P. Python", "Coef","Algo et p. C", "Coef","Archi. des ordinateurs", "Coef","Électronique num", "Coef","Total", "Moyenne", "Mention"]
+    # ecrire les titres dans le premier ligne
     for col_num, titre in enumerate(titres, 1):
         ws.cell(row=1, column=col_num).value = titre
+    #ecrire les donnees ligne par ligne
     row_num = 2
     for item in donnee_table.get_children():
         valeurs = list(donnee_table.item(item)["values"])
@@ -16,20 +22,26 @@ def sauvegarder_excel(donnee_table, coefficients, dossier):
             if v_str != "":
                 ws.cell(row=row_num, column=col_num).value = v_str
         row_num += 1
+    #feuille 2 : coefs
     ws2 = wb.create_sheet("Coefficients")
     ws2.append(["Module", "Coefficient"])
     for module, coef in coefficients.items():
         ws2.append([module, coef])
+    #sauvgardr le fichier
     chemin = os.path.join(dossier, "donnees_notes.xlsx")
     wb.save(chemin)
     return True
 
+    #charger les donnees depuis un fichier excel
+    #retourne un tuple : liste des etudiants , dic de coefs et ligne pour le treeview
 def charger_excel(fichier):
+    #lire les etudiant
     wb = openpyxl.load_workbook(fichier)
     ws1 = wb["Étudiants"]
     etudiants = []
     lignes = []
     for i, row in enumerate(ws1.iter_rows(values_only=True)):
+        #sauter la ligne des titres
         if i == 0:
             continue
         ligne = []
@@ -39,8 +51,10 @@ def charger_excel(fichier):
             else:
                 ligne.append(v)
         lignes.append(ligne)
+        #cree le dic d'info de etudiant
         etudiant = {"Id": row[0],"Nom": row[1],"Prenom": row[2],"cne": row[3]}
         etudiants.append(etudiant)
+    #lire les coefs
     ws2 = wb["Coefficients"]
     coefficients = {}
     for i, row in enumerate(ws2.iter_rows(values_only=True)):
@@ -49,25 +63,30 @@ def charger_excel(fichier):
         coefficients[row[0]] = row[1]
     return etudiants, coefficients, lignes
 
+    #generer un fichier excel contenant le releve de notes d'un etudiant dans le meme dossier
 def generer_releve(etudiant, valeurs, index_modules, dossier):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Relevé de Notes"
+    #titre
     ws.merge_cells("A1:D1")
     ws["A1"] = "Relevé de Notes"
     ws["A1"].font = openpyxl.styles.Font(size=16, bold=True)
+    #info de l'etudiant
     ws["A3"] = "Nom:"
     ws["B3"] = etudiant["Nom"]
     ws["A4"] = "Prénom:"
     ws["B4"] = etudiant["Prenom"]
     ws["A5"] = "CNE:"
     ws["B5"] = str(etudiant["cne"])
+    #en-tete du tableau
     ws["A7"] = "Module"
     ws["B7"] = "Note"
     ws["C7"] = "Coefficient"
     ws["A7"].font = openpyxl.styles.Font(bold=True)
     ws["B7"].font = openpyxl.styles.Font(bold=True)
     ws["C7"].font = openpyxl.styles.Font(bold=True)
+    #notes par module
     ligne = 8
     for module in index_modules:
         idx_n, idx_c = index_modules[module]
@@ -75,6 +94,7 @@ def generer_releve(etudiant, valeurs, index_modules, dossier):
         ws.cell(row=ligne, column=2).value = valeurs[idx_n]
         ws.cell(row=ligne, column=3).value = valeurs[idx_c]
         ligne += 1
+    #total,moyenne et montion
     ligne += 1
     ws.cell(row=ligne, column=1).value = "Total:"
     ws.cell(row=ligne, column=2).value = valeurs[18]
@@ -83,10 +103,12 @@ def generer_releve(etudiant, valeurs, index_modules, dossier):
     ws.cell(row=ligne, column=2).value = valeurs[19]
     ligne += 1
     ws.cell(row=ligne, column=1).value = "Mention:"
+    # mise en forme
     ws.cell(row=ligne, column=2).value = valeurs[20]
     ws.column_dimensions["A"].width = 40
     ws.column_dimensions["B"].width = 15
     ws.column_dimensions["C"].width = 15
+    #savgarder le fichier
     nom_fichier = "Releve_" + str(etudiant["Nom"]) + "_" + str(etudiant["Prenom"]) + ".xlsx"
     chemin = os.path.join(dossier, nom_fichier)
     wb.save(chemin)
