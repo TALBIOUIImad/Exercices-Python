@@ -52,6 +52,18 @@ This repository may include exercises and projects related to:
 
 ---
 
+## 🌟 Featured Mini-Projects
+
+This repository also includes beginner-friendly mini-projects such as:
+
+- **Student Management System (Tkinter)**  
+  A simple desktop application built with Python and Tkinter for managing student information through a graphical user interface.
+
+These mini-projects help apply Python fundamentals in practical, real-world scenarios.
+
+---
+
+
 ## 🛠️ Technologies Used
 
 - **Python 3.x**
