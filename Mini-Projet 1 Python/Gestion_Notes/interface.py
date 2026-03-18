@@ -27,7 +27,7 @@ def verifier_av():
 #Configuration de la fenetre principale
 fenetre = tk.Tk()
 fenetre.title("Application de Gestion de Notes.")
-fenetre.geometry("1690x780+1+1")
+fenetre.state("zoomed")
 fenetre.configure(background="#E5E4E2")
 #titre de l'app
 Title = tk.Label(fenetre,text="Gestion de Notes",bg="dark blue",font=("monospace",17,"bold"),fg="white")
