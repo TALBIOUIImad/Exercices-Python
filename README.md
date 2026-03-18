@@ -1,46 +1,67 @@
---> Exercices-Python
+# 🐍 Exercices-Python
 
-A Python learning repository that contains practical exercises, TD/TP assignments, mini-projects, and core programming concepts such as conditionals, loops, modules, and simple applications.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Purpose](https://img.shields.io/badge/Purpose-Learning%20%26%20Practice-orange)
 
+A professional Python learning repository containing practical exercises, TD/TP assignments, mini-projects, and essential programming concepts for beginners and intermediate learners.
 
---> Description
+---
 
-This repository is dedicated to learning and practicing Python programming through a collection of:
+## 📖 Overview
 
-- Practical exercises
-- TD/TP assignments
+**Exercices-Python** is a personal learning repository designed to strengthen Python programming skills through hands-on practice.
+
+It includes:
+
+- Practical coding exercises
+- TD / TP assignments
 - Mini-projects
-- Basic algorithmic problem-solving
-- Simple Python applications
+- Algorithmic problem-solving
+- Beginner-friendly Python applications
 
-It covers essential Python concepts for beginners and intermediate learners, with a focus on writing clean, logical, and structured code.
+This repository is continuously updated as part of an active Python learning journey.
 
+---
 
---> 🚀 Contents
+## 🎯 Objectives
 
-The repository includes different types of Python files and folders such as:
+The main objectives of this repository are to:
 
-- **Conditional structures** (`if`, `elif`, `else`)
+- Build a solid foundation in Python programming
+- Practice logical and algorithmic thinking
+- Improve problem-solving skills
+- Learn how to write clean and structured code
+- Develop small practical projects
+
+---
+
+## 📚 Topics Covered
+
+This repository may include exercises and projects related to:
+
+- **Variables and data types**
+- **Conditional statements** (`if`, `elif`, `else`)
 - **Loops** (`for`, `while`)
 - **Functions**
 - **Modules**
-- **Lists and basic data handling**
-- **Mini-projects**
-- **TD / TP practical assignments**
-- **Simple note or management applications**
+- **Lists and basic data structures**
+- **Input / Output handling**
+- **Simple file organization**
+- **Mini-projects and practical applications**
 
+---
 
---> 🎯 Learning Objectives
+## 🛠️ Technologies Used
 
-The main goals of this repository are:
+- **Python 3.x**
+- **VS Code** (recommended editor)
 
-- Understand Python syntax and fundamentals
-- Practice problem-solving with algorithms
-- Learn how to structure code correctly
-- Build small practical projects
-- Improve logical thinking through exercises
+---
 
+## 🚀 Getting Started
 
---> 🛠️ Technologies Used
+### 1. Clone the repository
 
-- **Python 3**
+```bash
+git clone https://github.com/TALBIOUIImad/Exercices-Python.git
