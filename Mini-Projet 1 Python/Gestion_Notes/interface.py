@@ -337,6 +337,13 @@ def stocker_notes():
         combo_box_note.set("")
     #effacer le champ de saisie de note                  
     Entrer_note.delete(0,tk.END)
+    #si toutes les notes sont saisies ,supp l'etudiant de combobox
+    if combo_box_note.get() == "" and len(list(combo_box_note["values"])) == 0:
+        noms = list(combo_box_etd["values"])
+        if etudiant_nom in noms :
+            noms.remove(etudiant_nom)
+            combo_box_etd["values"] = noms
+        combo_box_etd.set("")
 #La section des Entry notes
     #titre  de la section
 LBL_note_mdl = tk.Label(part_frame,text="Note du module :",bg="white",font=("helvetica",10,"bold"))
